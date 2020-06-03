@@ -2,8 +2,9 @@ version: '3'
 
 services:
   ad-poker:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    build: . 
+    tty: true
     ports: 
       - '3000:3000'
+    volumes: 
+      - .:/app
